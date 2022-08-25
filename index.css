@@ -16,6 +16,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   background-color: black;
+  align-items: center;
 }
 
 header {
@@ -52,6 +53,51 @@ display: flex;
   padding-left: 15px;
   padding: 10px;
   border-bottom: 20px;
+}
+
+.loader {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  -webkit-box-reflect: below 1xp linear-gradient(transparent,
+  #0005);
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00
+  ,#ffff00,#fb0094,#0000ff,#00ff00
+  ,#ffff00,#fb0094);
+  animation: animate 20s linear infinite;
+  background-size: 500%;
+
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90seg,#fb0094,#0000ff,#00ff00
+  ,#ffff00,#fb0094,#0000ff,#00ff00
+  ,#ffff00,#fb0094);
+  animation: animate 20s linear infinite;
+  background-size: 500%;
+  filter: blur(20px);
+}
+
+@keyframes animate {
+
+    0% {
+      background-position: 0 0;
+    }
+    0% {
+      background-position: 500% 0;
+    }
+
+
 }
 
 .hero {
