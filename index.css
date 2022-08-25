@@ -1,10 +1,21 @@
 * {
   margin: 0;
   padding: 0;
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600;900&display=swap');
+</style>
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background: black;
+  
   color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: black;
 }
 
 header {
@@ -66,11 +77,17 @@ display: flex;
 }
 
 button {
-  margin-left: 15px;
+  margin-left: 20vh;
   margin-top: 10px;
-  padding: 20px;
-  border-color: white;
+  padding: 5px;
+  width: 150px;
+  color: #111;
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
 
+button:hover {
+  transform: translate(-20px);
+  transition: 0.5s;
 }
 
 .img {
@@ -91,5 +108,180 @@ button {
 .nosotros {
   display: flex;
   margin-top: 150px;
+}
 
+.container-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-color: black;
+  padding: 40px 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.container-card .box {
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  position: relative;
+  width: 320px;
+  height: 400px;
+  color: #fff;
+  background-color: #111;
+  align-items: center;
+  margin: 20px 30px;
+  transition: 0.5s;
+}
+
+.container-card .box:hover {
+  transform: translate(-20px);
+}
+
+.container-card .box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+
+.container-card .box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+  filter: blur(30px);
+}
+
+.container-card .box:nth-child(2):before,
+.container-card .box:nth-child(2)::after {
+  background: linear-gradient(351deg,#03a9f4,#ff0058);
+}
+
+.container-card .box:nth-child(3):before,
+.container-card .box:nth-child(3)::after {
+  background: linear-gradient(351deg,#4dff03,#00d0ff);
+}
+
+.container-card .box span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.container-card .box span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.container-card .box .content {
+  position: relative;
+  z-index: 20;
+  padding: 20px 40px;
+}
+
+.container-card .box .content h2 , h3 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container-card .box .content p {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container-card .box .content a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  background-color: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  flex-direction: column;
+}
+
+footer .social_icon ,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icon li ,
+footer .menu li {
+  list-style: none;
+  
+}
+
+footer .social_icon li a ,
+footer .menu li a {
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  
+}
+
+footer .social_icon li a:hover {
+  transform: translate(-10px);
+}
+
+footer .menu li a {
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
