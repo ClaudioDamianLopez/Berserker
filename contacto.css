@@ -1,24 +1,101 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: consolas;
-    background-color: #111;
-    color: #fff;
-}
-
-body{
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600;900&display=swap');
+  </style>
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    
+    color: white;
+  }
+  
+  body {
     display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 30% 0;
     flex-direction: column;
-    align-items: center
-}
-
-img {
-    height: 300px;
-}
-.info {
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: black;
+    align-items: center;
+  }
+  
+  header {
+  width: 100%;
+  display: flex;
+  }
+  
+  .box {
+    width: 100%;
     display: flex;
-
-}
+  }
+  
+  .logo{
+    width: 50%;
+    display: flex;
+  }
+  
+  
+  .logo img {
+    height: 150px;
+  }
+  
+  
+  .nav {
+    height: 150px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .nav a {
+    margin-right: 20px;
+    padding-left: 15px;
+    padding: 10px;
+    border-bottom: 20px;
+  }
+  
+  .loader {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    -webkit-box-reflect: below 1xp linear-gradient(transparent,
+    #0005);
+  }
+  
+  .loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00
+    ,#ffff00,#fb0094,#0000ff,#00ff00
+    ,#ffff00,#fb0094);
+    animation: animate 20s linear infinite;
+    background-size: 500%;
+  
+  }
+  
+  .loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90seg,#fb0094,#0000ff,#00ff00
+    ,#ffff00,#fb0094,#0000ff,#00ff00
+    ,#ffff00,#fb0094);
+    animation: animate 20s linear infinite;
+    background-size: 500%;
+    filter: blur(20px);
+  }
+  
+  @keyframes animate {
+  
+      0% {
+        background-position: 0 0;
+      }
+      0% {
+        background-position: 500% 0;
+      }
+  
+  
+  }
